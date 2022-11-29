@@ -1,0 +1,274 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+
+body{
+    background-color: $JustBlue;
+}
+
+.navi {    
+    background: $JustBlue;
+    @include clearFix;
+
+    ul {
+        width: 100%
+    }
+
+    li {
+        float: left;
+        width: (100% / 4);
+        @include mediaQuery(1000px) {
+            width: 100%;
+        }
+    }
+
+    a {
+        text-orientation: none;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 18px;
+
+        &:hover {
+            background-color: lighten($Scarlet, 5);
+            text-decoration: none;
+            text-orientation: none;
+        }
+    }
+
+    input{
+        margin-top: 10px;
+    }
+
+    button{
+        margin-top: 10px;
+    }
+
+    .activo{
+        text-orientation: none;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+
+        &:hover {
+            background-color: lighten($JustBlue, 5);
+            text-decoration: none;
+            text-orientation: none;
+        }
+    }
+}
+
+.name{
+    
+    a{
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        color: black;
+    }
+
+    &:hover {
+        background-color: lighten($JustBlue, 5);
+    }
+}
+
+#carouselExampleCaptions{
+
+    border-top: 1px solid $almostWhite;
+    
+}
+
+.carousel-item .carousel-caption{
+
+    h5{
+        font-family: "Times New Roman";
+        font-size: $CarouselPrinc;
+        font-weight: bold;
+        color: whitesmoke;
+        text-transform: uppercase;
+        background-color:$FadedBlack;
+    }
+
+    p{
+        font-family: "Times New Roman";
+        font-size: $CarouselSecun;
+        font-weight: 500;
+        color: whitesmoke;
+        background-color: $FadedBlack;
+    }
+
+    a{
+        font-family: "Times New Roman";
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+#contenido{
+    border-top: 1px solid $almostWhite;
+    width: 100%; 
+    margin: 0; 
+    padding: 0;
+    font-family: "Times New Roman"; 
+    background-color: $darkBlue;
+
+    a,h1,h2,h3,h4,h5,p {
+        color: $litegray;
+    }
+
+    a {	
+        color: $navyBlue;	
+        background: none; 
+        text-decoration: none; 
+    }
+
+    a:hover { 
+        color: $darkBlue;
+        background: none; 
+    }
+
+
+    p { 
+        margin: 0 0 15px 0; 
+    }
+
+    h1 { 
+        font-family: "Times New Roman";   
+        margin: 20px 0 0; 
+    }
+
+    h1 a { 
+        color: $almostWhite; 
+        background: none; 
+    }
+
+    h1 a:hover { 
+        color: $almostWhite; 
+        background: none; 
+    }
+
+    h2 { 
+        font-family: "Times New Roman"; 
+        font-weight: bold;
+        margin: 0 0 12px; 
+    }
+
+    h4 { 
+        color: $liteBlue;
+        background: inherit; 
+        font-weight: normal; 
+        font-size: .9em; 
+    }
+    
+    .left { 
+        clear: left; 
+        float: left; 
+        width: 28%; 
+        padding: 0 34px 0 15px; 
+        font-size: .9em; 
+        margin: 0 0 15px; 
+
+        .leftmenu { 
+            list-style: none; 
+            margin: 0 0 20px 0; 
+            background-color: $darkBlue;
+
+            li {
+                padding: 0 0 0 12px; 
+                background: $darkBlue; 
+                background-color: $darkBlue;
+                color: $liteGreen; 
+
+                a {
+                    background: $almostWhite; 
+                    color: $liteGreen; 
+                    background-color: $darkBlue;
+                }
+            }
+        }
+
+        a {
+            background: $almostWhite; 
+            color: $navyBlue;  
+        }
+
+        h3 { 
+            border-bottom: 1px solid $almostWhite; 
+            padding: 0 0 7px; 
+            margin: 0 0 15px 0; 
+        }
+        
+        .notice { 
+            padding: 12px 14px 1px; 
+            background: #f4f4f4 url(../img/noticebg.gif) no-repeat bottom right; 
+            color: $liteBlue;
+            p{
+                color: black;
+            }
+        }
+    }
+
+    .right {
+        margin: 0 15px 20px 0;
+        padding: 0 0 0 35px;
+        border-left: 1px solid $almostWhite;
+        float: right;
+        width: 68%;
+        text-align: justify;
+
+        a {
+            background: $almostWhite; 
+            color: $navyBlue; 
+        }
+
+        h2 { 
+            border-bottom: 1px solid $almostWhite; 
+            padding: 0 0 8px; 
+        }
+    }
+}
+
+#footer { 
+    clear: both; 
+    border-top: 1px solid $almostWhite; 
+    padding: 10px 0; 
+    margin: 0 0 15px; 
+    font-size: .9em; 
+    color: $spaceGray; 
+    background-color: $JustBlue; 
+
+    a{
+        color: black; 
+    }
+
+    p {
+        color: black;
+    }
+
+    .col1 { 
+        float: left; 
+        width: 33%; 
+        padding: 7px 0 0 15px; 
+        margin: 0 0 10px; 
+    }
+
+    .col2 { 
+        float: left; 
+        width: 33%;
+        border-left: 1px solid $almostWhite; 
+        padding: 7px 0 0 40px;
+    }
+
+    .col3 { 
+        float: right; 
+        width: 33%; 
+        border-left: 1px solid $almostWhite; 
+        padding: 7px 0 0 40px; 
+    }
+}

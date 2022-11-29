@@ -1,43 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <title>AnimeForMe</title>
+    <link rel="shortcut icon" href="./img/Logo.jpg">
+    <meta charset="UTF-8" />
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/styles.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="name">
+                <a class="navbar-brand">
+                    <img src="./img/Logo.jpg" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
+                    AnimeForMe
+                </a>
+            </div>
+            <div class="navbar-collapse navi" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link activo" aria-current="page" href="#">Pagina de Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="anime.html">Anime</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manga.html">Manga</a>
+                    </li>
+                    <li>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="20000">
+                <img src="./img/portada1.jpg" class="d-block w-100" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Estrenos populares de otoño 2022!</h5>
+                    <p>Chainsaw man, Mob Pyscho III, BLEACH: Thousand-Year Blood War, Spy X Family, y muchos mas
+                        esperados! </p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="./img/portada2.jpg" class="d-block w-100" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>BLEACH: Thousand-Year Blood War</h5>
+                    <p>El último arco argumental que contaría sobre las aventuras de Ichigo Kurosaki,Tras recuperar sus
+                        poderes con ayuda de la Sociedad de Almas, Ichigo se lanza a hacer lo que mejor sabe, proteger a
+                        sus seres queridos, ¿vaya premisa cursi de comenzar un arco dramático no? Sin embargo ha
+                        resultado ser lo mejor de lo mejor.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="./img/portada3.jpg" class="d-block w-100" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Spy X Family</h5>
+                    <p>Spy X Family narra las aventuras del agente secreto Twilight, quien bajo su identidad civil de
+                        Loid Forger debe "formar una familia" para cumplir una misión y mantener la paz entre los
+                        países ficticios de Ostania y Westalis. Sin embargo, Twilight desconoce que la niña que adoptó
+                        como hija (Anya Forger) posee poderes de telepatía, mientras que la mujer con la que aceptó
+                        casarse (Yor Briar) es en realidad, una asesina profesional al servicio de Ostania.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="./img/portada4.jpg" class="d-block w-100" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Chainsaw Man</h5>
+                    <p>Denji es un joven atrapado en la pobreza, que trabaja para saldar la deuda de su padre fallecido
+                        con la Yakuza trabajando como cazador de demonios, con la ayuda de Pochita, su compañero canino,
+                        el Demonio de la Motosierra. Denji es traicionado por los Yakuza, quienes lo matan por un
+                        contrato con el DemonioZombi.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="./img/portada5.jpg" class="d-block w-100" height="400px">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Mob Pyscho III</h5>
+                    <p>Shigeo Kageyama es un estudiante de secundaria promedio conocido como Mob, por carecer de un
+                        sentido de presencia. A pesar de parecer una persona discreta, Mob es en realidad un poderoso
+                        psíquico. Mientras crece, Mob se da cuenta de que sus poderes se hacen cada vez más poderosos y
+                        por ende, también más peligrosos.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div id="contenido">
+        <div class="left">
+            <h2>Lo mas Nuevo en Anime este otoño del 2022!</h2>
+            <p>Lo mas nuevo en anime y manga lo tenemos aqui disponible para acceso gratuito a todos! Contamos con
+                animes populares tal como Attack on Titans, One Piece, Jujutsu no Kaisen, Boku no Hero, entre muchisimos
+                mas!</p>
+
+            <ul class="leftmenu">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Pagina de Inicio</li>
+                        <li class="breadcrumb-item"><a href="#">Anime</a></li>
+                        <li class="breadcrumb-item"><a href="#">Manga</a></li>
+                    </ol>
+                </nav>
+            </ul>
+            <img src="./img/img2.jpg" width="100%" height="400em" class="d-inline-block align-text-top">
+            <br />
+
+            <div class="notice">
+                <p>Si no encuentras el anime que buscas con gusto mandar un correo electronico al apuntado en la
+                    informacion de abajo y buscaremos complacerte y añadirlo a la lista!</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <h4>¿Crees que puedes verlos todos?</h4>
+            <h2>Animes para todos: Descubre al otaku que llevas dentro!</h2>
+            <p>Nos encanta hacer chistes sobre otakus. Por un lado, tenemos el insight (ya que nos identificamos con
+                estos) y también sabemos cuáles son los estereotipos asociados externamente. Pero siendo honestos,
+                reconocemos que ver animes online ya no es sólo para los otakus.</p>
+            <p>Los millennials crecimos viendo animes en TV y luego pasamos a ver animes online de amplio espectro
+                (Dragon Ball Z, Sailor Moon, etc), así que tiene mucho sentido que haya permeado la cultura mainstream
+                cuando empezamos a tener el control creativo. ¿Acaso la música es solo para músicos? El anime es también
+                un bien cultural de extrema flexibilidad porque es una expresión social, hay animes para todos.</p>
+            <p>Si no sabes cómo empezar y tus amigos te recomiendan animes online que no te convencen, no te preocupes.
+                ¡Eso está a punto de cambiar! Estamos seguros que te gustará nuestra seleccion de anime y mangas.
+                ¡Empecemos esta Aventura!</p>
+            <img src="./img/img1.jpg" width="100%" height="80%" class="d-inline-block align-text-top">
+            <div style="clear: both"></div>
+        </div>
+
+        <div id="footer">
+            <div class="col1">
+                <p>Terms and Conditions &middot; Privacy<br />
+                    &copy; AnimeForMe 2022. Todos los derechos reservados.</a></p>
+            </div>
+            <div class="col2">
+                <p>Address: <strong>Chihuahua, Chihuahua, Mexico</strong><br />
+                    Phone: <strong>+52 (123) 456 789</strong></p>
+            </div>
+            <div class="col3">
+                <p>Diseñado por: Equipo x <br />
+                    Instituo Tecnologico de Chihuahua II</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
 </html>

@@ -2,20 +2,27 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <div class="col1">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Terms and Conditions &middot; Privacy
+          <br />
+          &copy; AnimeForMe 2022. Todos los derechos reservados.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <div class="col2">
+        <p>
+          Address: <strong>Chihuahua, Chihuahua, Mexico</strong>
+          <br />
+          Phone: <strong>+52 (123) 456 789</strong>
+        </p>
+      </div>
+      <div class="col3">
+        <p>
+          Diseñado por: Equipo x <br />
+          Instituo Tecnologico de Chihuahua II
+        </p>
+      </div>
     </div>
   );
 }

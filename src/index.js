@@ -4,6 +4,9 @@ import Counter from "./counter";
 import Time from "./Time";
 import ListAnime from "./listAnime";
 import TablaPeliculas from "./tablaPeliculas";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
 const contenidoIndex = document.getElementById("footer");
 const containerIndex = ReactDOM.createRoot(contenidoIndex);
@@ -63,3 +66,16 @@ containerListAnime.render(<ListAnime />);
 const contenidoTablaPeliculas = document.getElementById("tablaPeliculas");
 const containerTablaPeliculas = ReactDOM.createRoot(contenidoTablaPeliculas);
 containerTablaPeliculas.render(<TablaPeliculas />);
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+
+/*
+const contenidoCartas = document.getElementById("tarjetas");
+const containerCartas = ReactDOM.createRoot(contenidoCartas);
+containerCartas.render(<tarjetas />);
+*/
